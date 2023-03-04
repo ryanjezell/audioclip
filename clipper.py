@@ -1,8 +1,9 @@
 import sys
 from pydub import AudioSegment
 import os
-import shutil
 
+
+## Check to see if output folder exists, creates one if not
 current_dir = os.getcwd()
 output_dir = os.path.join(current_dir, 'output')
 if not os.path.exists(output_dir):
@@ -35,9 +36,6 @@ def backClip(*args):
         whole_video = AudioSegment.from_mp3(i)
         desired_clip = whole_video[:len(whole_video) - back_clip_time]
         desired_clip.export(export_path + i, format="mp3")
-       
-
-
 
 
 # Check for valid arg entry
