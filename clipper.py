@@ -1,6 +1,7 @@
 import sys
 from pydub import AudioSegment
 import os
+import shutil
 
 current_dir = os.getcwd()
 output_dir = os.path.join(current_dir, 'output')
@@ -31,7 +32,8 @@ def backClip(*args):
     for i in lst:
         whole_video = AudioSegment.from_mp3(i)
         desired_clip = whole_video[:len(whole_video) - back_clip_time]
-        desired_clip.export("clipped_" + i, format="mp3")
+        desired_clip.export("output/clipped_" + i, format="mp3")
+
 
 
 # Check for valid arg entry
