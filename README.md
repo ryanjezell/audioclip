@@ -21,9 +21,9 @@ ___
 Open a terminal or command prompt and navigate to the directory where you saved the program files.
 
 Run the following command to launch the program:
-python clipper.py <args>
+python clipper.py (args)
   
-Where <args> is = to the mp3 files you wish to clip. 
+Where (args) is = to the mp3 files you wish to clip. 
 
 
 The new audio file will be outputted to and /output dir which will be generated for you if not already made.
