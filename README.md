@@ -3,7 +3,7 @@ This program is written in Python using Pydub's library to clip audio files.
 
 ___
 
-## DEPENDENCIES
+## Dependencies
 
 Make sure you have Python 3 installed on your system.
 
@@ -16,7 +16,7 @@ You will also need ffmpeg: https://ffmpeg.org/download.html
 Follow instructions for download and install. 
 ___
 
-## USAGE
+## Usage
 
 Open a terminal or command prompt and navigate to the directory where you saved the program files.
 
