@@ -7,7 +7,6 @@ Make sure you have Python 3 installed on your system.
 
 Install the Pydub library by running the following command in your terminal:
 
-Copy code
 pip install pydub
 
 Clone the repository or download the ZIP file and extract it to your desired location.
