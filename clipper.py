@@ -5,17 +5,17 @@ from pydub import AudioSegment
 args = sys.argv[1:] 
 
 
-## Formula = x * 1000, where x is desired seconds to clip and * 1000 is accounting for millisecond format ##
-clip_time = 2 * 1000 
+## Formula = x * 1000, where x is desired seconds to clip off the end and * 1000 is accounting for millisecond format ##
+back_clip_time = 2 * 1000 
 
 
 def main():
     validCheck(args)
-    audioClip(args)
+    backClip(args)
 
 
 # Clip off last <seconds> of audio
-def audioClip(*args):
+def backClip(*args):
     lst = []
 
     for arg in args:
@@ -23,9 +23,9 @@ def audioClip(*args):
 
 
     for i in lst:
-        song = AudioSegment.from_mp3(i)
-        desired_clip = song[:clip_time]
-        desired_clip.export("clipped" + i, format="mp3")
+        whole_video = AudioSegment.from_mp3(i)
+        desired_clip = whole_video[:len(whole_video) - back_clip_time]
+        desired_clip.export("clipped_" + i, format="mp3")
 
 
 # Check for valid arg entry
