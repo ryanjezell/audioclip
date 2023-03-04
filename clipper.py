@@ -32,7 +32,11 @@ def backClip(*args):
     for i in lst:
         whole_video = AudioSegment.from_mp3(i)
         desired_clip = whole_video[:len(whole_video) - back_clip_time]
-        desired_clip.export("output/clipped_" + i, format="mp3")
+        if os.name == 'nt':
+            desired_clip.export("output/clipped_" + i, format="mp3")
+        else:
+            desired_clip.export("output\clipped_" + i, format="mp3")
+
 
 
 
