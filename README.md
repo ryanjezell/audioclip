@@ -3,7 +3,7 @@ This program is written in Python using Pydub's library to clip audio files.
 
 ___
 
-## DEPENDENCIES:
+## DEPENDENCIES
 
 Make sure you have Python 3 installed on your system.
 
