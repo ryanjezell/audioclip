@@ -2,6 +2,7 @@
 This program is written in Python using Pydub's library to clip audio files.
 
 Installation
+
 Make sure you have Python 3 installed on your system.
 
 Install the Pydub library by running the following command in your terminal:
