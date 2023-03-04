@@ -33,8 +33,8 @@ def backClip(*args):
 
 
     for i in lst:
-        whole_video = AudioSegment.from_mp3(i)
-        desired_clip = whole_video[:len(whole_video) - back_clip_time]
+        whole_clip = AudioSegment.from_mp3(i)
+        desired_clip = whole_clip[:len(whole_clip) - back_clip_time]
         desired_clip.export(export_path + i, format="mp3")
 
 
