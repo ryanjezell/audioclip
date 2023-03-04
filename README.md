@@ -9,7 +9,7 @@ Make sure you have Python 3 installed on your system.
 
 Install the Pydub library by running the following command in your terminal:
 
-pip install pydub
+> pip install pydub
 
 You will also need ffmpeg: https://ffmpeg.org/download.html
 
