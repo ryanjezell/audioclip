@@ -1,7 +1,9 @@
 # audioclip
 This program is written in Python using Pydub's library to clip audio files.
 
-DEPENDENCIES:
+___
+
+## DEPENDENCIES:
 
 Make sure you have Python 3 installed on your system.
 
@@ -14,20 +16,15 @@ You will also need ffmpeg: https://ffmpeg.org/download.html
 Follow instructions for download and install. 
 ___
 
+## USAGE
 
-Clone the repository or download the ZIP file and extract it to your desired location.
-
-Usage
 Open a terminal or command prompt and navigate to the directory where you saved the program files.
 
 Run the following command to launch the program:
-python clipper.py
+python clipper.py <args>
+  
+Where <args> is = to the mp3 files you wish to clip. 
 
-And then add the files you wish to clip, using command line arguments (subject to change), make sure to include complete file name AKA "clip1.mp3"
 
-The new audio file will be saved in the same directory as the original file with the prefix clipped attached to the file name.
+The new audio file will be outputted to and /output dir which will be generated for you if not already made.
 
-Limitations
-This program only works with audio files that are supported by Pydub (see the Pydub documentation for a list of supported file types).
-
-This program may not work correctly with audio files that have a variable bitrate or sample rate.
