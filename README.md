@@ -28,6 +28,7 @@ Run the following command to launch the program:
 
 (args) = the mp3 files you wish to manipulate.
 
+    NOTE: you can instead use "all" to merge / clip every mp3 file in the directory. 
 
 The new audio file will be outputted to and /output dir which will be generated for you if not already made.
 

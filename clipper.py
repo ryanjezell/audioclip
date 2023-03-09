@@ -2,7 +2,6 @@ import sys
 from pydub import AudioSegment
 import os
 
-
 ## Check to see if output folder exists, creates one if not
 current_dir = os.getcwd()
 output_dir = os.path.join(current_dir, 'output')
@@ -17,9 +16,6 @@ if len(args) == 0:
     print("Input 'clip' or 'merge and then the file name(s)")
     sys.exit()
 
-## Formula = x * 1000, where x is desired seconds to clip off the end and * 1000 is accounting for millisecond format ##
-back_clip_time = 2 * 1000 
-
 ## Export path determination
 clipped_path =  "output/clipped_" if os.name == 'nt' else "output\clipped_"
 merged_path = "output/merged_"if os.name == 'nt' else "output\merged_"
@@ -27,12 +23,20 @@ merged_path = "output/merged_"if os.name == 'nt' else "output\merged_"
 def main():
     keyWord(args)
 
-## recognize first word command
+## Recognize first word command
 def keyWord(args):
     
     if len(args) < 2:
         print("Error: Input 'merge' or 'clip and then the file name(s) you wish to execute the action on.")
         return
+    
+    if args[1] == "all":
+        args.remove("all")
+        current_files = []
+        current_files = os.listdir(current_dir)
+        for filename in current_files:
+            if filename.endswith('.MP3'):
+                args.append(filename)
 
     if args[0] == "merge":
         args.remove("merge")
@@ -44,7 +48,10 @@ def keyWord(args):
 
     else:
         print("Error: Input 'merge' or clip' before file name(s).")
-    
+
+
+## Formula = x * 1000, where x is desired seconds to clip off the end and * 1000 is accounting for millisecond format ##
+back_clip_time = 2 * 1000 
 
 # Clip off last <seconds> of audio
 def backClip(args):
@@ -54,6 +61,7 @@ def backClip(args):
         desired_clip = whole_clip[:len(whole_clip) - back_clip_time]
         desired_clip.export(clipped_path + i, format="mp3")
 
+# Merges clips
 def mergeClips(args):
 
     length = len(args)
