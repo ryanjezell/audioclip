@@ -21,10 +21,12 @@ ___
 Open a terminal or command prompt and navigate to the directory where you saved the program files.
 
 Run the following command to launch the program:
-python clipper.py (action) (args)
+
+> python clipper.py (action) (args)
   
-Where (action) = either "merge" or "clip", depending on desired function.
-Where (args) = the mp3 files you wish to manipulate.
+(action) = "merge" or "clip", depending on desired function.
+
+(args) = the mp3 files you wish to manipulate.
 
 
 The new audio file will be outputted to and /output dir which will be generated for you if not already made.
